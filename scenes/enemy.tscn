@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6tqe7vdmited"]
+
+[ext_resource type="AudioStream" uid="uid://cdbtsian0set4" path="res://Assets/sounds/monster_roars.mp3" id="1_7p1mj"]
+
+[node name="big boss" type="Node2D"]
+
+[node name="monster sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_7p1mj")
+bus = &"SFX"

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://n2m4k8jaoxui"]
+
+[ext_resource type="AudioStream" uid="uid://csinacrwn3l1u" path="res://Assets/sounds/character_death.mp3" id="1_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://jirielbnvd6e" path="res://Assets/sounds/character_walking.mp3" id="2_dqkch"]
+[ext_resource type="AudioStream" uid="uid://bmafmmjwueoie" path="res://Assets/sounds/character_jump.mp3" id="3_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://bfjy00paqg7lx" path="res://Assets/sounds/shoot.mp3" id="4_dqkch"]
+
+[node name="Player" type="Node2D"]
+
+[node name="death sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_qhqgy")
+bus = &"SFX"
+
+[node name="walk sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_dqkch")
+
+[node name="jump sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qlg0r")
+bus = &"SFX"
+
+[node name="shooting sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dqkch")
+bus = &"SFX"
