@@ -1,9 +1,98 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6tqe7vdmited"]
+[gd_scene load_steps=16 format=3 uid="uid://c6tqe7vdmited"]
 
-[ext_resource type="AudioStream" uid="uid://cdbtsian0set4" path="res://Assets/sounds/monster_roars.mp3" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://b4vh2vuu0dvmm" path="res://scripts/enemy.gd" id="1_5uy6h"]
+[ext_resource type="AudioStream" uid="uid://cdbtsian0set4" path="res://assets/sounds/monster_roars.mp3" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://dr5ptpo3oscnm" path="res://assets/godot/A1/Untitled_design__2_-artguru-removebg-preview.png" id="2_4ra3w"]
+[ext_resource type="Texture2D" uid="uid://drnm8ua84e4hk" path="res://assets/godot/A1/idle.mon.png" id="3_5uy6h"]
+[ext_resource type="PackedScene" uid="uid://de5f2cfacty58" path="res://scenes/kill_zone.tscn" id="5_c4w8v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4w8v"]
+atlas = ExtResource("2_4ra3w")
+region = Rect2(7, 0, 158, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwavj"]
+atlas = ExtResource("2_4ra3w")
+region = Rect2(165, 0, 158, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nenq2"]
+atlas = ExtResource("2_4ra3w")
+region = Rect2(323, 0, 158, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md484"]
+atlas = ExtResource("2_4ra3w")
+region = Rect2(481, 0, 158, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipns3"]
+atlas = ExtResource("3_5uy6h")
+region = Rect2(0, 0, 150, 175)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qclf"]
+atlas = ExtResource("3_5uy6h")
+region = Rect2(150, 0, 150, 175)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8i8w"]
+atlas = ExtResource("3_5uy6h")
+region = Rect2(300, 0, 150, 175)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otmr2"]
+atlas = ExtResource("3_5uy6h")
+region = Rect2(450, 0, 150, 175)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wtq4b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4w8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwavj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nenq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md484")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipns3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qclf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w8i8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otmr2")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ra3w"]
+radius = 19.0
+height = 40.0
 
 [node name="big boss" type="Node2D"]
+script = ExtResource("1_5uy6h")
 
 [node name="monster sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_7p1mj")
 bus = &"SFX"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wtq4b")
+animation = &"move"
+autoplay = "move"
+
+[node name="Kill Zone" parent="AnimatedSprite2D" instance=ExtResource("5_c4w8v")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Kill Zone"]
+position = Vector2(7, -11)
+shape = SubResource("CapsuleShape2D_4ra3w")

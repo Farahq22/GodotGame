@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://347m7642w5bg"
-path="res://.godot/imported/WhatsApp Image 2025-11-04 at 13.25.22.jpeg-026a59a0ff9d7307fee65e47d2986e8a.ctex"
+path="res://.godot/imported/WhatsApp Image 2025-11-04 at 13.25.22.jpeg-a66d56864ed926d0420cdb2e9ad106a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/godot/A1/WhatsApp Image 2025-11-04 at 13.25.22.jpeg"
-dest_files=["res://.godot/imported/WhatsApp Image 2025-11-04 at 13.25.22.jpeg-026a59a0ff9d7307fee65e47d2986e8a.ctex"]
+source_file="res://assets/godot/A1/WhatsApp Image 2025-11-04 at 13.25.22.jpeg"
+dest_files=["res://.godot/imported/WhatsApp Image 2025-11-04 at 13.25.22.jpeg-a66d56864ed926d0420cdb2e9ad106a6.ctex"]
 
 [params]
 

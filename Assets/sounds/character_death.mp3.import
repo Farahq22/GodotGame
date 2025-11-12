@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://csinacrwn3l1u"
-path="res://.godot/imported/character_death.mp3-f5019553c5daaaf92d058e72a13beeae.mp3str"
+path="res://.godot/imported/character_death.mp3-ea23bd2bbf8279130efb869d3ac22ed9.mp3str"
 
 [deps]
 
-source_file="res://Assets/sounds/character_death.mp3"
-dest_files=["res://.godot/imported/character_death.mp3-f5019553c5daaaf92d058e72a13beeae.mp3str"]
+source_file="res://assets/sounds/character_death.mp3"
+dest_files=["res://.godot/imported/character_death.mp3-ea23bd2bbf8279130efb869d3ac22ed9.mp3str"]
 
 [params]
 

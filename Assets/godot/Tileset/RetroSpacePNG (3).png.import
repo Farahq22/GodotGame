@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw0dgaoerghv8"
-path="res://.godot/imported/RetroSpacePNG (3).png-9a7c1802c38420d11b24a35b31e71988.ctex"
+path="res://.godot/imported/RetroSpacePNG (3).png-ae460701e21f2e914975c34e2a2c5bc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/godot/Tileset/RetroSpacePNG (3).png"
-dest_files=["res://.godot/imported/RetroSpacePNG (3).png-9a7c1802c38420d11b24a35b31e71988.ctex"]
+source_file="res://assets/godot/Tileset/RetroSpacePNG (3).png"
+dest_files=["res://.godot/imported/RetroSpacePNG (3).png-ae460701e21f2e914975c34e2a2c5bc1.ctex"]
 
 [params]
 

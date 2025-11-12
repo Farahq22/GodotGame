@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct4j8c1penqth"
-path="res://.godot/imported/SpaceShooterAssetPack_Characters.png-d64f326a8180a66cfe14256086c8da5c.ctex"
+path="res://.godot/imported/SpaceShooterAssetPack_Characters.png-dc8042c9b2507d42007b2de60d4caa81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/godot/A1/SpaceShooterAssetPack_Characters.png"
-dest_files=["res://.godot/imported/SpaceShooterAssetPack_Characters.png-d64f326a8180a66cfe14256086c8da5c.ctex"]
+source_file="res://assets/godot/A1/SpaceShooterAssetPack_Characters.png"
+dest_files=["res://.godot/imported/SpaceShooterAssetPack_Characters.png-dc8042c9b2507d42007b2de60d4caa81.ctex"]
 
 [params]
 

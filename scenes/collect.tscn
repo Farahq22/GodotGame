@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd6b6n50m4f6r"]
+[gd_scene load_steps=16 format=3 uid="uid://bd6b6n50m4f6r"]
 
-[ext_resource type="AudioStream" uid="uid://cgl386glxrauf" path="res://Assets/sounds/collect.mp3" id="1_5gp5l"]
+[ext_resource type="AudioStream" uid="uid://cgl386glxrauf" path="res://assets/sounds/collect.mp3" id="1_5gp5l"]
+[ext_resource type="Script" uid="uid://ccfkstr6gghwx" path="res://scripts/collect.gd" id="1_vjruv"]
+[ext_resource type="Texture2D" uid="uid://cgp12kqfm3a5e" path="res://assets/godot/A1/bet.png" id="2_0d63h"]
 
 [sub_resource type="Animation" id="Animation_d1qwf"]
 resource_name = "pickup"
@@ -10,7 +12,77 @@ _data = {
 &"pickup": SubResource("Animation_d1qwf")
 }
 
-[node name="collect" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjruv"]
+atlas = ExtResource("2_0d63h")
+region = Rect2(8, 32, 151, 178)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md5hr"]
+atlas = ExtResource("2_0d63h")
+region = Rect2(159, 32, 151, 178)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ofy6"]
+atlas = ExtResource("2_0d63h")
+region = Rect2(310, 32, 151, 178)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5un2t"]
+atlas = ExtResource("2_0d63h")
+region = Rect2(461, 32, 151, 178)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5ieg"]
+atlas = ExtResource("2_0d63h")
+region = Rect2(8, 210, 151, 178)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mlgk"]
+atlas = ExtResource("2_0d63h")
+region = Rect2(159, 210, 151, 178)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rscdm"]
+atlas = ExtResource("2_0d63h")
+region = Rect2(310, 210, 151, 178)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4p0p"]
+atlas = ExtResource("2_0d63h")
+region = Rect2(461, 210, 151, 178)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2r6l8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjruv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md5hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ofy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5un2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5ieg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mlgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rscdm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4p0p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vjruv"]
+radius = 57.0
+height = 156.0
+
+[node name="collect" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_vjruv")
 
 [node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_5gp5l")
@@ -20,3 +92,14 @@ bus = &"SFX"
 libraries = {
 &"": SubResource("AnimationLibrary_i8u2s")
 }
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2r6l8")
+autoplay = "default"
+frame_progress = 0.9167001
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(14, 0)
+shape = SubResource("CapsuleShape2D_vjruv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

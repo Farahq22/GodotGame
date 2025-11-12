@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://vjkrr8tbix7e"
-path="res://.godot/imported/10-minutes-spaceship.mp3-812a39d42c2dfc9973911b6fe38bf12e.mp3str"
+path="res://.godot/imported/10-minutes-spaceship.mp3-2b8d2425fae94300f9fce813d00c7fc9.mp3str"
 
 [deps]
 
-source_file="res://Assets/music/10-minutes-spaceship.mp3"
-dest_files=["res://.godot/imported/10-minutes-spaceship.mp3-812a39d42c2dfc9973911b6fe38bf12e.mp3str"]
+source_file="res://assets/music/10-minutes-spaceship.mp3"
+dest_files=["res://.godot/imported/10-minutes-spaceship.mp3-2b8d2425fae94300f9fce813d00c7fc9.mp3str"]
 
 [params]
 

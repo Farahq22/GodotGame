@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cdbtsian0set4"
-path="res://.godot/imported/monster_roars.mp3-49136a9fc21fb52fea2096a7daeea7cb.mp3str"
+path="res://.godot/imported/monster_roars.mp3-62b7a4fbf4c99d68d685f630d6b3e8c7.mp3str"
 
 [deps]
 
-source_file="res://Assets/sounds/monster_roars.mp3"
-dest_files=["res://.godot/imported/monster_roars.mp3-49136a9fc21fb52fea2096a7daeea7cb.mp3str"]
+source_file="res://assets/sounds/monster_roars.mp3"
+dest_files=["res://.godot/imported/monster_roars.mp3-62b7a4fbf4c99d68d685f630d6b3e8c7.mp3str"]
 
 [params]
 

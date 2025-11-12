@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4usgs3v8v8d8"]
+
+[ext_resource type="Texture2D" uid="uid://bphpmlpd1nhqe" path="res://assets/godot/bullet/guns_v1_bullet.png" id="1_mkf8s"]
+[ext_resource type="Script" uid="uid://cb157s6v6en6m" path="res://scenes/bullet.gd" id="1_y25gk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y25gk"]
+radius = 8.0
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_y25gk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = ExtResource("1_mkf8s")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-40, -32, 80, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_y25gk")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

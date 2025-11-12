@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://c6luyjho63gnt"]
+
+[ext_resource type="Texture2D" uid="uid://crub17gy0p5ds" path="res://assets/images/space-7442090_1280.png" id="1_faxov"]
+[ext_resource type="FontFile" uid="uid://c6mccnvcqrf22" path="res://assets/fonts/Pixelout Personal Use Only.ttf" id="2_hl81x"]
+[ext_resource type="Script" uid="uid://deytanadd7234" path="res://scripts/Exit_button.gd" id="3_hl81x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v3ap6"]
+texture = ExtResource("1_faxov")
+modulate_color = Color(0.37254903, 0.37254903, 0.37254903, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8xaq"]
+bg_color = Color(0.25882354, 0.5058824, 0.39215687, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15ee3"]
+bg_color = Color(0.14117648, 0.30588236, 0.23137255, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u1yty"]
+bg_color = Color(0.18039216, 0.37254903, 0.28627452, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v31sk"]
+
+[node name="Victory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_v3ap6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.5
+offset_top = -156.0
+offset_right = 212.5
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8816874, 0.8912971, 0.12910044, 1)
+theme_override_fonts/font = ExtResource("2_hl81x")
+theme_override_font_sizes/font_size = 100
+text = "victory"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.5
+offset_top = -17.0
+offset_right = 116.5
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_hl81x")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_e8xaq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_15ee3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u1yty")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v31sk")
+text = "Exit"
+script = ExtResource("3_hl81x")
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]
